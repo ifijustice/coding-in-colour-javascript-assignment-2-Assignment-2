@@ -1,12 +1,14 @@
 // 🏦 Bank and Account System 
 // Bank Class: Manages multiple accounts
 class Bank {
-    constructor() {
+    constructor(owner, initialbalance=0) {
         this.accounts = []; // Stores all accounts in the bank
     }
 
-    // Add methods here:
-    // Example: createAccount(name, initialDeposit)
+    createAccount(name, initialDeposit = 0) {
+        if (initialDeposit < 0) {
+            console.log("Initial deposit cannot be negative.");
+            return;
 
 }
 
